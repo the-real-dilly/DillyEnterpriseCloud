@@ -1,0 +1,54 @@
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class MultiplePopups {
+
+    public static void main(String[] args) {
+        // Loop to create multiple popups
+        for (int i = 1; i <= 3; i++) {
+            // Capture the loop variable
+            int popupNumber = i;
+
+            // Create a custom message for each popup
+            String message = "This is popup " + popupNumber;
+
+            // Create buttons for the popup
+            JButton button = new JButton("OK");
+
+            // Create an array of options with the button
+            Object[] options = {button};
+
+            // Create the JOptionPane
+            JOptionPane optionPane = new JOptionPane(
+                message,
+                JOptionPane.INFORMATION_MESSAGE,
+                JOptionPane.DEFAULT_OPTION,
+                null,
+                options,
+                options[0]
+            );
+
+            // Create a dialog using the option pane
+            JDialog dialog = optionPane.createDialog("Popup " + popupNumber);
+
+            // Add an ActionListener to the button
+            button.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    // Call the method with the specific popup number
+                    handlePopupAction(popupNumber);
+                    dialog.dispose(); // Close the dialog
+                }
+            });
+
+            // Show the dialog
+            dialog.setVisible(true);
+        }
+    }
+
+    // Method to handle the action for each popup
+    public static void handlePopupAction(int popupNumber) {
+        System.out.println("Button clicked on popup " + popupNumber);
+    }
+}
