@@ -52,3 +52,26 @@ public class MultiplePopups {
         System.out.println("Button clicked on popup " + popupNumber);
     }
 }
+
+
+import java.awt.*;
+import javax.swing.*;
+
+public class TaskbarFlashExample {
+    public static void main(String[] args) {
+        // Create a simple JFrame
+        JFrame frame = new JFrame("Taskbar Flash Example");
+        frame.setSize(300, 200);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+        
+        // Check if the taskbar is supported
+        if (Taskbar.isTaskbarSupported()) {
+            Taskbar taskbar = Taskbar.getTaskbar();
+            // Request attention (this makes the taskbar icon flash)
+            taskbar.requestUserAttention(true);
+        } else {
+            System.out.println("Taskbar is not supported on this platform.");
+        }
+    }
+}
