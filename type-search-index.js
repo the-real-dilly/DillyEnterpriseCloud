@@ -1,1 +1,0 @@
-typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"com.dillyenterprise.ironvault","l":"FileManager"},{"p":"com.dillyenterprise.ironvault","l":"HttpUtils"},{"p":"com.dillyenterprise.ironvault.exceptions","l":"IronVaultException"},{"p":"com.dillyenterprise.ironvault","l":"IronVaultSDK"}];updateSearchResults();
