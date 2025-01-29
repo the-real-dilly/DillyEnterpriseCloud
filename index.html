@@ -3,103 +3,160 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="https://github.com/the-real-dilly/DillyEnterpriseCloud/raw/main/dillyE.ico" type="image/icon type">
   <title>Dilly Defender - Download</title>
   <style>
     body {
-      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      font-family: "Arial", sans-serif;
       margin: 0;
       padding: 0;
-      background: linear-gradient(135deg, #1a1a2e, #16213e);
-      color: #f5f5f5;
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #0a192f; /* Dark blue, Dilly Cloud style */
+      color: #fff;
+      padding: 20px 0;
       text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    header img {
+      width: 50px;
+      height: 50px;
+      vertical-align: middle;
+    }
+
+    header h1 {
+      display: inline;
+      font-size: 2.5rem;
+      margin-left: 15px;
+      font-weight: bold;
+      color: #00aaff; /* Dilly Cloud's accent color */
     }
 
     .container {
-      max-width: 600px;
-      margin: 100px auto;
-      padding: 20px;
-      background: #0f3460;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-      border: 2px solid #3498db;
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 30px;
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
     }
 
-    .container h1 {
-      font-size: 2.5rem;
-      color: #3498db;
+    .container h2 {
+      font-size: 2rem;
+      color: #0a192f;
       margin-bottom: 15px;
+      text-align: center;
     }
 
     .container p {
-      font-size: 1.2rem;
-      margin-bottom: 20px;
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #555;
+      text-align: center;
+      margin-bottom: 30px;
     }
 
-    a {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 25px;
-      font-size: 1rem;
-      font-weight: bold;
-      color: #fff;
-      background-color: #3498db;
+    .downloads {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .downloads a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 220px;
+      padding: 20px;
+      margin: 15px;
       text-decoration: none;
+      background: #f9f9f9;
+      border: 2px solid #e5e5e5;
       border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       transition: all 0.3s ease;
-      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
     }
 
-    a:hover {
-      background-color: #3498db;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    .downloads a:hover {
+      background: #e5efff;
+      border-color: #00aaff;
+      transform: translateY(-5px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .downloads img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 10px;
+    }
+
+    .downloads span {
+      font-size: 1rem;
+      color: #333;
+      font-weight: bold;
     }
 
     footer {
-      margin-top: 20px;
+      text-align: center;
+      padding: 15px 0;
+      background: #0a192f; /* Dark blue, matching header */
+      color: #fff;
       font-size: 0.9rem;
-      color: #aaa;
+      position: fixed;
+        left: 0;  
+        width: 100%;
+        bottom: 0;
     }
 
     footer a {
-      color: #3498db;
+      color: #00aaff; /* Accent color for footer links */
       text-decoration: none;
     }
 
     footer a:hover {
       text-decoration: underline;
     }
+
   </style>
 </head>
 <body>
+<header>
+  <img src="https://github.com/the-real-dilly/DillyEnterpriseCloud/raw/main/dillyE.ico" alt="Dilly Defender Icon">
+  <h1>Dilly Enterprise Cloud & AI, Defender Download Page</h1>
+</header>
+
 <div class="container">
-    <h1>Dilly Defender</h1>
-    <p>Your trusted cybersecurity solution.</p>
-    <p>Dilly Defender is an advanced cybersecurity tool that leverages cutting-edge AI technology to protect your systems from threats. It specializes in detecting polyglot files — malicious files that disguise themselves as multiple file types — with an impressive 95% detection rate. By combining deep learning algorithms, heuristic analysis, and advanced pattern recognition, Dilly Defender ensures maximum protection against even the most sophisticated cyberattacks.</p>
-    <p>Choose your operating system to download the latest version:</p>
-    <div class="downloads">
-        <ul>
-            <li>
-                <a href="https://github.com/the-real-dilly/DillyEnterpriseCloud/raw/main/dilly_defender" download>
-                    Download for Windows
-                </a>
-            </li>
-            <li>
-                <a href="https://github.com/the-real-dilly/DillyEnterpriseCloud/raw/main/dilly_defender" download>
-                    Download for macOS
-                </a>
-            </li>
-            <li>
-                <a href="https://github.com/the-real-dilly/DillyEnterpriseCloud/raw/main/dilly_defender" download>
-                    Download for Linux
-                </a>
-            </li>
-        </ul>
-    </div>
+  <h2>Download Dilly Defender</h2>
+  <p>
+    Your trusted cybersecurity solution. Dilly Defender is an advanced tool powered by AI to detect and block even the most sophisticated cyber threats, specializing in polyglot file detection.
+  </p>
+  <div class="downloads">
+    <a href="https://github.com/the-real-dilly/DillyEnterpriseCloud/raw/main/dilly_defender_windows" download>
+      <img src="https://cdn-icons-png.flaticon.com/512/888/888879.png" alt="Windows Icon">
+      <span>Download for Windows</span>
+    </a>
+    <a href="https://github.com/the-real-dilly/DillyEnterpriseCloud/raw/main/dilly_defender" download>
+      <img src="https://cdn-icons-png.flaticon.com/512/888/888841.png" alt="macOS Icon">
+      <span>Download for macOS</span>
+    </a>
+    <a href="https://github.com/the-real-dilly/DillyEnterpriseCloud/raw/main/dilly_defender" download>
+      <img src="https://cdn-icons-png.flaticon.com/512/6124/6124995.png" alt="Linux Icon">
+      <span>Download for Linux (DEB)</span>
+    </a>
+    <a href="https://github.com/the-real-dilly/DillyEnterpriseCloud/raw/main/dilly_defender-1.0-1.x86_64.rpm" download>
+      <img src="https://cdn-icons-png.flaticon.com/512/6124/6124995.png" alt="Linux Icon">
+      <span>Download for Linux (RPM)</span>
+    </a>
+  </div>
 </div>
 
-
-  <footer>
-    © 2025 Dilly Enterprise Cloud Systems & AI. All Rights Reserved.
-  </footer>
+<footer>
+  © 2025 Dilly Enterprise Cloud Systems & AI. All Rights Reserved. |
+</footer>
 </body>
 </html>
