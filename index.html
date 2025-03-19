@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="https://github.com/the-real-dilly/DillyEnterpriseCloud/raw/main/dillyE.ico" type="image/icon type">
   <title>Dilly Defender - Test Model</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <style>
     body {
       font-family: "Arial", sans-serif;
@@ -208,6 +209,100 @@
       width: 350px;
       height: 350px;
     }
+/* Dropdown Styling */
+select {
+  font-size: 14px;
+  padding: 6px 10px;
+  margin-left: 10px;
+  border: 2px solid #333;
+  border-radius: 5px;
+  background-color: #333;
+  color: white;
+  width: 115px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+select:hover {
+  border-color: #3498db;
+  cursor: pointer;
+}
+
+select:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+/* File Input Styling */
+input[type="file"] {
+  font-size: 16px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background-color: #333;
+  width: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+input[type="file"]:hover {
+  border-color: #3498db;
+}
+
+/* Button Styling */
+button {
+  background-color: #3498db;
+  color: white;
+  font-size: 18px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+/* Button and Dropdown Flex Layout */
+.button-container {
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px; /* Space between button and dropdown */
+}
+
+/* Model Selector Container */
+.model-selector-container {
+  display: inline-block;
+  padding: 0;
+}
+/* Hide the default dropdown caret */
+#model-selector {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-right: 30px; /* Space for the rocket icon */
+}
+
+/* Custom style for the rocketship icon */
+.custom-arrow {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: #333;
+  pointer-events: none;
+}
+
+.model-label {
+  font-size: 14px;
+  margin-right: 5px;
+}
   </style>
 </head>
 <body>
@@ -219,17 +314,29 @@
     <img src="./DillyAI.png" alt="Dilly Defender Logo">
     <img src="./Defender.jpg" alt="Dilly Defender Logo">
   </div>
-
   <div class="container">
-    <h2>Upload Your File to Test our latest AI tool</h2>
+    <h2>Upload Your File to Test Our Latest AI Tool</h2>
     <p>
-      Upload a file to check whether it is a Polyglot or not. After uploading, the file will be processed by our AI model.
+      Upload a file to check whether it is a Polyglot or not. After uploading, the file will be processed by the selected AI model.
     </p>
     
     <div class="form-container">
-      <form action="/upload" method="post" enctype="multipart/form-data">
-        <input type="file" name="file" id="file" required><br>
-        <button type="submit">Upload & Classify</button>
+      <form id="upload-form" action="/upload" method="post" enctype="multipart/form-data">
+        <label for="file">Upload File:</label>
+        <input type="file" name="file" id="file" required><br><br>
+
+        <div class="button-container">
+          <button type="submit">Upload & Classify</button>
+
+          <!-- Dropdown styled as a mini model selector -->
+          <div class="model-selector-container">
+            <select id="model-selector" name="model" required>
+              <option value="model1" title="This is our best model for this detection type.">DillyXcel V1.1</option>
+              <option value="model2" title="Recently trained model on new method still needs work.">DillyEcho ScanX V1-BETA</option>
+            </select>
+            <i class="fas fa-rocket custom-arrow"></i> <!-- Rocketship icon -->
+          </div>
+        </div>
       </form>
     </div>
 
@@ -237,7 +344,7 @@
       <h3>Processing Results:</h3>
       <p id="result-output"></p>
     </div>
-  </div>
+</div>
 
   <div class="features-section">
     <h3>Why Choose Dilly Defender?</h3>
