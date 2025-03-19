@@ -429,7 +429,7 @@ button:hover {
     
           // Set the result message and apply the flashing red effect if it's 'Polyglot'
           const resultElement = document.getElementById('result-output');
-          resultElement.innerHTML = `<p class="result-message ${isPolyglot ? 'flash-red' : ''}">${resultMessage}</p>`;
+          resultElement.innerHTML = `<p class="result-message ${!isPolyglot ? 'flash-red' : ''}">${resultMessage}</p>`;
         })
         .catch(error => {
           // If there's an error, display the error message
