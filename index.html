@@ -425,7 +425,7 @@ button:hover {
     
           // Check if the result is predicted as 'Polyglot'
           const resultMessage = data.output || data.error || 'Something went wrong!';
-          const isPolyglot = data.output && !data.output.toLowerCase().includes('Non-polyglot');
+          const isPolyglot = data.output && !data.output.toLowerCase().includes('Non-Polyglot');
     
           // Set the result message and apply the flashing red effect if it's 'Polyglot'
           const resultElement = document.getElementById('result-output');
